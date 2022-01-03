@@ -19,14 +19,18 @@ const Search = () => {
             setResults(data.query.search)
         }
 
-        const timoutId = setTimeout(() => {
-            if(term) {
-                search()
-            } 
-        }, 500)
-
-        return () => {
-            clearTimeout(timoutId)
+        if (term && !results.length) {
+            search()
+        } else {
+            const timoutId = setTimeout(() => {
+                if(term) {
+                    search()
+                } 
+            }, 1000)
+    
+            return () => {
+                clearTimeout(timoutId)
+            }
         }
       
     }, [term])
