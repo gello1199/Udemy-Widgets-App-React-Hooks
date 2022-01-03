@@ -24,6 +24,10 @@ const Search = () => {
                 search()
             } 
         }, 500)
+
+        return () => {
+            clearTimeout(timoutId)
+        }
       
     }, [term])
 
