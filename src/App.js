@@ -34,13 +34,19 @@ const items = [
         } 
     ]
 
+    const showAccordion = () => {
+        if (window.location.pathname === '/') {
+           return <Accordion items={items} />
+        }
+    }
+
 export default () => {
 
     return (
         <div>
-        {/* <Accordion items={items} /> */}
+        {showAccordion()}
         {/* <Search /> */}
-       <Translate />
+       {/* <Translate /> */}
         </div>
     )
 }
