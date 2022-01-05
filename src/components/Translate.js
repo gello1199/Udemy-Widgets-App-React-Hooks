@@ -1,5 +1,3 @@
-// AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM
-
 import React, { useState } from 'react';
 import Dropdown from './Dropdown';
 import Convert from './Convert';
@@ -48,7 +46,7 @@ const Translate = () => {
         />
         <hr />
         <h3 className="ui header">Output</h3>
-        <Convert />
+        <Convert text={text} language={language} />
     </div>
     );
 }
